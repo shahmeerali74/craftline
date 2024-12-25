@@ -1,0 +1,309 @@
+/* Reset and base styles */
+body, h1, h2, h3, p, ul, li, a {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #00467f;
+    color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ffd700;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin:8px 8px;
+}
+
+.nav-links a {
+    color: #fff;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #ffd700;
+}
+/* Ensure the dropdown remains open when hovering over Services or the dropdown menu */
+.nav-links .dropdown:hover .dropdown-menu,
+.dropdown-menu:hover {
+    display: block;
+}
+
+/* Position the dropdown menu */
+.dropdown {
+    position: relative; /* Parent must have relative positioning */
+}
+
+.dropdown-menu {
+    display: none; /* Initially hidden */
+    position: absolute;
+    top: 100%; /* Aligns the dropdown directly below the parent */
+    left: 0;
+    background-color: #00467f;
+    list-style: none;
+    padding: 0.5rem 0;
+    margin: 0;
+    border-radius: 5px;
+    z-index: 999; /* Ensures it appears above other elements */
+    min-width: 200px; /* Optional: Fix width */
+}
+
+/* Style individual dropdown items */
+.dropdown-menu li {
+    padding: 0.5rem 1rem;
+    white-space: nowrap; /* Prevents wrapping */
+}
+
+.dropdown-menu li a {
+    color: #fff;
+    display: block;
+    transition: background-color 0.3s;
+}
+
+/* Hover effect for dropdown items */
+.dropdown-menu li a:hover {
+    background-color: #ffd700;
+    color: #00467f;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.social-icons a {
+    margin-left: 1rem;
+    color: #ffd700;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 4px 0;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background: url('../images/slider-img/banneer.webp') center/cover no-repeat;
+    color: #fff;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 1rem;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.cta {
+    background-color: #ffd700;
+    color: #00467f;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.cta:hover {
+    background-color: #fff;
+    color: #00467f;
+}
+
+/* Why Choose Us Section */
+.why-choose-us {
+    background-color: #f9f9f9;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.feature-item {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.feature-icon {
+    font-size: 2.5rem;
+    color: #00467f;
+    margin-bottom: 10px;
+}
+
+.feature-item h3 {
+    font-size: 1.25rem;
+    margin: 10px 0;
+}
+
+/* Footer */
+.footer {
+    background-color: #00467f;
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.footer-brand {
+    text-align: left;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links ul li {
+    margin: 8px 0;
+}
+
+.footer-links ul li a {
+    text-decoration: none;
+    color: #ffd700;
+}
+
+.footer-social a {
+    color: #fff;
+    margin: 0 10px;
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    font-size: 0.875rem;
+    color: #ccc;
+}
+/* Footer Contact Styling */
+.footer-contact {
+    text-align: left; /* Align the content to the left */
+    margin: 0 auto; /* Center this section */
+}
+
+.footer-contact h3 {
+    margin-bottom:20px; /* Space below heading */
+    color:#fff;
+    /* text-align: center; Center the heading text */
+}
+
+.footer-contact p {
+    /* display: flex; */
+    align-items: center; /* Align icon and text vertically */
+    margin-bottom: 15px; /* Space between lines */
+    font-size: 1rem; /* Readable font size */
+    color: #fff;
+}
+
+.footer-contact p a {
+    color: #fff; /* Text color for links */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s; /* Smooth hover effect */
+}
+
+.footer-contact p a:hover {
+    color: #ffd700; /* Change color on hover */
+}
+
+.footer-contact p i {
+    margin-right: 10px; /* Space between icon and text */
+    font-size: 1.2rem;
+    color: #ffd700;
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background-color: #00467f;
+        width: 200px;
+        border-radius: 5px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+    .footer-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Center all child elements */
+        gap: 20px; /* Add spacing between footer sections */
+    }
+
+    .footer-about,
+    .footer-links,
+    .footer-contact {
+        text-align: center; /* Center text on smaller screens */
+    }
+    .footer-contact p{
+        /* display: flex; */
+        align-items: center; /* Align icon and text vertically */
+        margin-bottom: 15px; /* Space between lines */
+        font-size: 1rem; /* Readable font size */
+        color: #fff;
+    }
+}

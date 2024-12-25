@@ -1,0 +1,94 @@
+/* General Styles for Services Section */
+.services {
+    padding: 50px 20px; /* Top/Bottom padding and small side padding for extra responsiveness */
+    background-color: #f9f9f9; /* Light background */
+    text-align: center;
+    margin: 0 auto; /* Center the section */
+    max-width: 1200px; /* Restrict the section's maximum width */
+}
+
+.services h1 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #00467f;
+}
+
+/* Service Item */
+.service-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 50px;
+    gap: 20px;
+    text-align: left;
+    padding: 20px; /* Internal padding for better readability */
+    border-radius: 10px; /* Rounded corners */
+    background-color: #fff; /* White background for each service block */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for better separation */
+}
+
+.service-item.reverse {
+    flex-direction: row-reverse;
+}
+
+/* Service Text Styling */
+.service-text {
+    flex: 1;
+    padding: 20px;
+}
+
+.service-text h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #00467f;
+}
+
+.service-text p {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.service-text .cta-btn {
+    background-color: #00467f;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.service-text .cta-btn:hover {
+    background-color: #ffd700;
+    color: #00467f;
+}
+
+/* Service Image Styling */
+.service-image {
+    flex: 1;
+    text-align: center;
+}
+
+.service-image img {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Ensure responsive stacking for smaller screens */
+@media (max-width: 768px) {
+    .service-item {
+        flex-direction: column;
+    }
+    .service-item.reverse {
+        flex-direction: column;
+    }
+    .service-text {
+        order: 1; /* Ensure the text section always comes first */
+    }
+
+    .service-image {
+        order: 2; /* Ensure the image section always comes second */
+    }
+}
