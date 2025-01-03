@@ -58,6 +58,11 @@ a {
     display: block;
 }
 
+/* When the dropdown is toggled, display it */
+.nav-links .dropdown-menu.show {
+    display: block;
+}
+
 /* Position the dropdown menu */
 .dropdown {
     position: relative; /* Parent must have relative positioning */
@@ -286,6 +291,13 @@ a {
 
     .hamburger {
         display: flex;
+    }
+    .dropdown-menu {
+        display: none; /* Hidden by default */
+    }
+
+    .dropdown-menu.show {
+        display: block; /* Show the dropdown when the 'show' class is added */
     }
     .footer-container {
         display: flex;
