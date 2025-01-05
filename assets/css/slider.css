@@ -1,0 +1,150 @@
+/* General Styles for the Service Card */
+.service-card {
+    background: #f0f5fa; /* Light background for the card */
+    color: #00467f; /* Text color matching navbar */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    overflow: hidden; /* Ensure everything stays within the card */
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth hover effect */
+    width: 260px; /* Set the width of the card */
+    margin: 5px; /* Reduced margin to bring cards closer */
+}
+
+/* Hover Effect on the Card */
+.service-card:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Enhance shadow on hover */
+}
+
+/* Image Section Styles */
+.service-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    overflow: hidden; /* Ensures image stays within bounds */
+}
+
+.service-image img {
+    width: 100%; /* Full width of the card */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Ensure neat cropping if necessary */
+    border-radius: 15px 15px 0 0; /* Rounded top corners */
+}
+
+/* Description Section Styles */
+.service-description {
+    padding: 10px; /* Padding for description */
+    background-color: #ffffff; /* White background for description */
+    border-radius: 0 0 15px 15px; /* Rounded bottom corners */
+    text-align: center; /* Center-align text */
+    color: #00467f; /* Text color matching navbar */
+}
+
+/* Title in Description */
+.service-description h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 5px 0; /* Small gap above and below title */
+    color: #00467f; /* Same as navbar color */
+}
+
+/* Paragraph Text in Description */
+.service-description p {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #00548f; /* Slightly lighter shade of blue */
+    margin: 0; /* Removes any extra margin */
+}
+
+/* Owl Carousel Dots */
+.owl-carousel .owl-dots .owl-dot span {
+    background-color: #00467f; /* Match navbar color */
+    opacity: 0.7;
+    transition: opacity 0.3s;
+}
+
+.owl-carousel .owl-dots .owl-dot.active span {
+    opacity: 1; /* Highlight active dot */
+}
+
+/* More Services Section */
+.more-services {
+    padding: 20px 10px; /* Reduced padding to reduce background space */
+    background-color: #e6f0f8; /* Soft light blue for contrast */
+    text-align: center;
+}
+
+.more-services h2 {
+    font-size: 2rem;
+    margin-bottom: 15px; /* Reduced margin below heading */
+    color: #00467f;
+}
+
+/* Owl Carousel container */
+.owl-carousel {
+    display: flex;
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+    flex-wrap: wrap; /* Allow wrapping of items */
+    gap: 10px; /* Reduced gap between cards */
+    padding: 0 20px; /* Ensure equal space on both left and right */
+    margin: 0 auto; /* Center the container on the page */
+}
+
+/* Adjust the card width */
+.service-card {
+    width: 260px; /* Reduced width to bring them closer */
+    margin: 5px; /* Reduced margin to bring cards closer */
+}
+
+/* Remove Owl Carousel Navigation Buttons */
+.owl-carousel .owl-nav {
+    display: none; /* Hide navigation arrows */
+}
+
+/* Centering the cards on the page */
+.owl-carousel {
+    display: flex;
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+    flex-wrap: wrap; /* Allow wrapping of items */
+    gap: 10px; /* Reduced gap between cards */
+    padding: 0 20px; /* Ensure equal space on both left and right */
+    justify-content: center; /* Center cards horizontally */
+    margin: 0 auto; /* Center the container on the page */
+}
+
+/* Center the Owl Carousel container on the page */
+.more-services {
+    display: flex;
+    justify-content: center; /* Center the services section */
+    align-items: center; /* Vertically align */
+    flex-direction: column; /* Stack the heading and cards vertically */
+}
+
+/* Add more space from the left and right for larger screens */
+.owl-carousel {
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+/* Media Query for small screens (Below 768px) */
+@media (max-width: 768px) {
+    .service-card {
+        width: 90%; /* Slightly smaller for better spacing on small screens */
+        margin: 5px auto; /* Center and add space between cards */
+    }
+
+    /* Owl Carousel container adjustments */
+    .owl-carousel {
+        padding: 0 10px; /* Remove extra padding */
+    }
+}
+
+/* Media Query for Extra Small Screens (Below 480px) */
+@media (max-width: 480px) {
+    .service-card {
+        width: 100%; /* Cards take full width */
+        margin: 5px 0; /* Further reduced margin */
+    }
+}

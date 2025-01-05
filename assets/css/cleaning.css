@@ -1,0 +1,61 @@
+.painting-hero {
+    background-image: url('../images/services-images/cleaning/cleaning.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 35vh; /* Adjust height */
+    margin-top: 60px; /* Add space from top (navbar height) */
+    opacity: 0.9; /* Slight opacity for image */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    position: relative; /* Ensures text is above the pseudo-element */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+}
+
+/* Add dark overlay over the entire hero image */
+.painting-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent dark overlay */
+    z-index: 1; /* Ensures the overlay is behind the text */
+}
+
+/* Hero content (text) remains above the overlay */
+.painting-hero .hero-content {
+    position: relative;
+    z-index: 2; /* Ensures the text appears above the overlay */
+}
+
+/* Enhance readability for Paragraph */
+.painting-hero .hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+/* Adjust the size and positioning of the text inside the hero section */
+.painting-hero .hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    -webkit-text-stroke: 1px black;
+}
+
+.painting-hero .cta-btn {
+    background-color: #ffd700;
+    color: #00467f;
+    padding: 0.8rem 1.5rem;
+    font-weight: bold;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.painting-hero .cta-btn:hover {
+    background-color: #fff;
+    color: #00467f;
+}

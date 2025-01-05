@@ -4,8 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/services.css">
+    <link rel="stylesheet" href="./assets/css/services-pages.css">
+    <link rel="stylesheet" href="./assets/css/gardening.css">
+    <link rel="stylesheet" href="./assets/css/slider.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <title>Painting and Decorating</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <title>Gardening</title>
 </head>
 <body>
 
@@ -20,7 +26,7 @@
                 <ul class="dropdown-menu">
                     <li><a href="./painting-and-decorating.html">Painting & Decorating</a></li>
                     <li><a href="./flooring.html">Flooring</a></li>
-                    <li><a href="./gardnening.html">Gardening</a></li>
+                    <li><a href="./gardening.html">Gardening</a></li>
                     <li><a href="./cleaning.html">Cleaning</a></li>
                 </ul>
             </li>
@@ -39,45 +45,141 @@
         </div>
     </nav>
 
+    <!-- Hero Section -->
+    <header class="painting-hero">
+        <div class="hero-content">
+            <h1>Gardening Services</h1>
+            <p>Bring your garden to life with our expert gardening services for a lush and vibrant outdoor space.</p>
+            <a href="#contact" class="cta-btn">Contact us</a>
+        </div>
+    </header>
 
+    <!-- Service Overview Section -->
+    <section class="service-overview">
+        <p>Craftline's Gardening Services help you transform your outdoor space into a thriving garden that suits your preferences. Whether it's regular maintenance, landscaping, or garden design, we have the expertise to create your dream garden. From planting to lawn care, we ensure your garden flourishes throughout the year.</p>
+    </section>
 
-<h1>Gardening</h1>
+    <!-- Projects Section -->
+    <section class="services">
+        <h1>Our Projects</h1>
+
+        <!-- Service 1 -->
+        <div class="service-item">
+            <div class="service-text">
+                <h2>Garden Design & Landscaping</h2>
+                <p>Our team of skilled gardeners creates stunning garden designs and landscapes, from modern minimalistic gardens to lush green spaces. We bring your ideas to life with expert knowledge and care.</p>
+                <button class="cta-btn">Learn More</button>
+            </div>
+            <div class="service-image">
+                <img src="./assets/images/services-images/gardnening/gardening-project-one.jpg" alt="Garden Design">
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="how-it-works">
+        <h2>How Our Gardening Service Works</h2>
+        <div class="process-steps">
+            <div class="process-step">
+                <i class="fas fa-calendar-check process-icon"></i>
+                <h3>Step 1: Schedule a Consultation</h3>
+                <p>Contact us to arrange a consultation, where we discuss your vision for your garden and provide expert advice on what can be done.</p>
+            </div>
+            <div class="process-step">
+                <i class="fas fa-leaf process-icon"></i>
+                <h3>Step 2: Garden Design & Preparation</h3>
+                <p>We begin with designing your garden layout and preparing the soil, adding plants, and arranging outdoor features like patios, lawns, and garden beds.</p>
+            </div>
+            <div class="process-step">
+                <i class="fas fa-tools process-icon"></i>
+                <h3>Step 3: Implementation & Maintenance</h3>
+                <p>Our team carries out the planting and setup of your garden, ensuring everything is perfect. We also offer ongoing maintenance to keep your garden thriving.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Slider Section -->
+    <section class="more-services">
+        <h2>More Services</h2>
+        <div class="owl-carousel owl-theme">
+            <!-- Service 1 -->
+            <div class="service-card">
+                <div class="service-image">
+                    <a href="./cleaning.html"><img src="./assets/images/services-images/cleaning/cleaning.jpg" alt="Service 1"></a>
+                </div>
+                <div class="service-description">
+                    <h3>Cleaning</h3>
+                </div>
+            </div>
+            <!-- Service 2 -->
+            <div class="service-card">
+                <div class="service-image">
+                    <a href="./flooring.html"><img src="./assets/images/services-images/flooring/floor.jpg" alt="Service 1"></a>
+                </div>
+                <div class="service-description">
+                    <h3>Floor Installation</h3>
+                </div>
+            </div>
+            <!-- Service 3 -->
+            <div class="service-card">
+                <div class="service-image">
+                    <a href="./flooring.html"><img src="./assets/images/slider-img/Plasterboard Installation.jpg" alt="Service 1"></a>
+                </div>
+                <div class="service-description">
+                    <h3>Plasterboard Installation</h3>
+                </div>
+            </div>
+            <!-- Additional Service -->
+            <div class="service-card">
+                <div class="service-image">
+                    <a href="./painting-and-decorating.html"><img src="./assets/images/services-images/painting/painting-hero-section.jpg" alt="Service 1"></a>
+                </div>
+                <div class="service-description">
+                    <h3>Painting and Decorating</h3>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Footer Section -->
     <footer class="footer">
-            <div class="footer-container">
-                <div class="footer-about">
-                    <h3>About Craftline</h3>
-                    <p>At Craftline Services, we transform spaces with our expertise and commitment to excellence. From painting to landscaping, we provide top-notch services tailored to your needs.</p>
-                </div>
-                <div class="footer-links">
-                    <h3>Quick Links</h3>
-                    <ul>
-                        <li><a href="./home.html">Home</a></li>
-                        <li><a href="./about.html">About Us</a></li>
-                        <li><a href="">Services</a></li>
-                        <li><a href="./contactus.html">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-contact">
-                    <h3>Contact Us</h3>
-                    <p>
-                        <a href="tel:+1234567890"><i class="fas fa-phone"></i> +123-456-7890</a>
-                    </p>
-                    <p>
-                        <a href="mailto:info@craftline.com"><i class="fas fa-envelope"></i> info@craftline.com</a>
-                    </p>
-                    <p>
-                        <a href="https://www.google.com/maps?q=123+Main+Street,+City,+Country" target="_blank">
-                            <i class="fas fa-map-marker-alt"></i> 123 Main Street, City, Country
-                        </a>
-                    </p>
-                </div>
+        <div class="footer-container">
+            <div class="footer-about">
+                <h3>About Craftline</h3>
+                <p>At Craftline Services, we transform spaces with our expertise and commitment to excellence. From painting to landscaping, we provide top-notch services tailored to your needs.</p>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 Craftline Services. All rights reserved.</p>
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="./home.html">Home</a></li>
+                    <li><a href="./about.html">About Us</a></li>
+                    <li><a href="">Services</a></li>
+                    <li><a href="./contactus.html">Contact</a></li>
+                </ul>
             </div>
-        </footer>
+            <div class="footer-contact">
+                <h3>Contact Us</h3>
+                <p>
+                    <a href="tel:+1234567890"><i class="fas fa-phone"></i> +123-456-7890</a>
+                </p>
+                <p>
+                    <a href="mailto:info@craftline.com"><i class="fas fa-envelope"></i> info@craftline.com</a>
+                </p>
+                <p>
+                    <a href="https://www.google.com/maps?q=123+Main+Street,+City,+Country" target="_blank">
+                        <i class="fas fa-map-marker-alt"></i> 123 Main Street, City, Country
+                    </a>
+                </p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Craftline Services. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>        
     <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/slider.js"></script>
 </body>
 </html>
