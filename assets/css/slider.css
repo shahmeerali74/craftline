@@ -69,15 +69,14 @@
 
 /* More Services Section */
 .more-services {
-    display: flex; /* Use Flexbox for alignment */
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-    flex-direction: column; /* Stack the heading and cards vertically */
-    height: 100vh; /* Full viewport height to center vertically */
-    padding: 0; /* Remove extra padding */
+    display: flex;
+    flex-direction: column; /* Stack the heading and slider vertically */
+    align-items: center; /* Center content horizontally */
+    justify-content: center; /* Center content vertically */
+    text-align: center;
+    padding: 20px; /* Add spacing around the section */
     background-color: #e6f0f8; /* Soft light blue for contrast */
-    margin: 0; /* Remove any margins */
-    box-sizing: border-box; /* Ensure padding/margin doesn't affect centering */
+    box-sizing: border-box; /* Ensure padding does not affect centering */
 }
 
 .more-services h2 {
@@ -88,19 +87,22 @@
 
 /* Owl Carousel container */
 .owl-carousel {
-    display: flex;
+    display: flex; /* Enable Flexbox for centering */
     justify-content: center; /* Center items horizontally */
-    align-items: center; /* Center items vertically */
-    flex-wrap: wrap; /* Allow wrapping of items */
-    gap: 10px; /* Reduced gap between cards */
-    padding: 0 20px; /* Ensure equal space on both left and right */
+    align-items: center; /* Align items vertically */
+    flex-wrap: wrap; /* Allow wrapping of items if needed */
+    gap: 10px; /* Add spacing between cards */
     margin: 0 auto; /* Center the container on the page */
+    max-width: 1200px; /* Limit the maximum width for responsiveness */
+    padding: 0 20px; /* Add some horizontal padding */
+    width: 100%; /* Use full width for responsiveness */
+    box-sizing: border-box; /* Include padding in width calculations */
 }
 
 /* Adjust the card width */
 .service-card {
-    width: 260px; /* Reduced width to bring them closer */
-    margin: 5px; /* Reduced margin to bring cards closer */
+    margin: 10px; /* Add some spacing around cards */
+    flex: 0 1 auto; /* Allow cards to resize within the container */
 }
 
 /* Remove Owl Carousel Navigation Buttons */
@@ -138,17 +140,17 @@
 /* Media Query for small screens (Below 768px) */
 @media (max-width: 768px) {
     .more-services {
-        height: auto; /* Allow content to dictate height */
-        padding: 20px; /* Add some padding for spacing */
+        padding: 10px; /* Reduce padding for smaller screens */
     }
     .service-card {
-        width: 90%; /* Slightly smaller for better spacing on small screens */
-        margin: 5px auto; /* Center and add space between cards */
+        width: 90%; /* Make cards slightly smaller on small screens */
+        margin: 10px auto; /* Center cards with auto margin */
     }
 
     /* Owl Carousel container adjustments */
     .owl-carousel {
         padding: 0 10px; /* Remove extra padding */
+        gap: 5px; /* Reduce gap between cards */
     }
 }
 

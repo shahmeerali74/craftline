@@ -124,27 +124,60 @@ a {
 
 /* Hero Section */
 .hero {
+    position: relative;
     height: 100vh;
     background: url('../images/slider-img/banneer.webp') center/cover no-repeat;
     color: #fff;
-    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     padding: 1rem;
+    box-sizing: border-box; /* Include padding in width calculations */
+    overflow: hidden; /* Prevent content from overflowing */
+}
+.hero::before {
+    content: ''; /* Required for pseudo-elements */
+    position: absolute; /* Positioned relative to the .hero */
+    top: 0;
+    left: 0;
+    width: 100%; /* Cover full width */
+    height: 100%; /* Cover full height */
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+    z-index: 1; /* Place it behind the content but above the background */
+}
+/* Hero Content */
+.hero-content {
+    position: relative; /* Ensure it sits above the overlay */
+    z-index: 2; /* Place content above the overlay */
+    max-width: 90%; /* Limit content width */
+    margin: 0 auto;
+    padding: 1rem;
+    border-radius: 10px; /* Optional: rounded corners for the content */
+    text-align: center; /* Center-align content */
 }
 
 .hero h1 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    word-wrap: break-word; /* Ensure long words wrap */
 }
 
 .hero p {
     font-size: 1.2rem;
     margin-bottom: 2rem;
 }
-
+/* Call-to-Action Button */
+.cta-btn {
+    background-color: #ffd700;
+    color: #00467f;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    text-decoration: none; /* Remove underline */
+    display: inline-block; /* Ensure button-like behavior */
+}
 .cta {
     background-color: #ffd700;
     color: #00467f;
@@ -317,5 +350,34 @@ a {
         margin-bottom: 15px; /* Space between lines */
         font-size: 1rem; /* Readable font size */
         color: #fff;
+    }
+    .hero h1 {
+        font-size: 2rem; /* Adjust heading size */
+    }
+
+    .hero p {
+        display: none;
+    }
+
+    .hero-content {
+        padding: 1rem; /* Adjust padding for smaller screens */
+    }
+}
+@media (max-width: 475px) {
+    .hero h1 {
+        font-size: 1.5rem; /* Further reduce heading size */
+    }
+
+    .hero p {
+        display: none;
+    }
+
+    .cta-btn {
+        padding: 0.6rem 1rem; /* Adjust button size */
+        font-size: 0.9rem; /* Reduce font size for button */
+    }
+
+    .hero-content {
+        max-width: 95%; /* Allow more space for smaller screens */
     }
 }
