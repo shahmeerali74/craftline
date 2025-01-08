@@ -125,8 +125,8 @@ a {
 /* Hero Section */
 .hero {
     position: relative;
-    height: 100vh;
-    background: url('../images/slider-img/banneer.webp') center/cover no-repeat;
+    height: 70vh; /* Use 70% of the viewport height */
+    background: url('../images/slider-img/banneer.webp') center/cover no-repeat; /* Ensure full width with 'cover' */
     color: #fff;
     display: flex;
     align-items: center;
