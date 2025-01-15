@@ -1,0 +1,74 @@
+/* Ensures the container takes up full width */
+.service-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 50px 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Left section (Text section) */
+.service-text {
+    flex: 0 0 50%; /* 50% width for the left text section */
+    padding-right: 20px;
+    box-sizing: border-box;
+    text-align: left;
+}
+
+/* Right section (Image slider section) */
+.new-slider {
+    flex: 0 0 50%; /* 50% width for the slider */
+    max-width: 100%;
+    padding-left: 20px;
+    box-sizing: border-box;
+    overflow: hidden; /* Ensure overflow is hidden */
+}
+
+/* Styling for the images in the new slider */
+#new-slider .project-image {
+    text-align: center;
+}
+
+/* Ensure images are responsive */
+#new-slider .project-image img {
+    max-width: 100%; /* Image fits within the slider */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Optional: Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Ensure owl items are centered and take full width of the container */
+#new-slider .owl-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* Each slide takes the full width */
+}
+
+/* Hide overflowed images */
+#new-slider .owl-stage {
+    overflow: hidden;
+}
+
+/* Optional responsiveness for mobile/tablet */
+@media (max-width: 768px) {
+    .service-item {
+        flex-direction: column; /* Stack text and image */
+        text-align: center;
+    }
+
+    .service-text {
+        flex: 0 0 100%; /* 100% width on mobile */
+        padding-right: 0;
+    }
+
+    .new-slider {
+        flex: 0 0 100%; /* 100% width on mobile */
+        padding-left: 0;
+    }
+
+    #new-slider .project-image img {
+        max-width: 90%; /* Slightly smaller image on mobile */
+    }
+}
