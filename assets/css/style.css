@@ -125,26 +125,29 @@ a {
 /* Hero Section */
 .hero {
     position: relative;
-    height: 70vh; /* Use 70% of the viewport height */
-    background: url('../images/slider-img/banneer.webp') center/cover no-repeat; /* Ensure full width with 'cover' */
-    color: #fff;
+    height: 70vh;
+    width: 100%;
+    background-image: url('../images/slider-img/banner-img4.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; /* Ensures full image is visible */
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 1rem;
-    box-sizing: border-box; /* Include padding in width calculations */
-    overflow: hidden; /* Prevent content from overflowing */
+    box-sizing: border-box;
+    overflow: hidden;
 }
+
 .hero::before {
-    content: ''; /* Required for pseudo-elements */
-    position: absolute; /* Positioned relative to the .hero */
+    content: '';
+    position: absolute;
     top: 0;
     left: 0;
-    width: 100%; /* Cover full width */
-    height: 100%; /* Cover full height */
-    background: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
-    z-index: 1; /* Place it behind the content but above the background */
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Optional overlay */
+    z-index: 1;
 }
 /* Hero Content */
 .hero-content {
